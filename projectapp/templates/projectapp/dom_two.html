@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><select name="" id="fruits">
+    <option value="apple">apple</option>
+    <option value="banana">banana</option>
+    <option value="orange">orange</option>
+    <option value="grape">grape</option>
+</select>
+<button onclick="rem()">Remove</button>
+<br>
+
+
+<input type="password" id="pass">
+<button onclick="show()">Show</button>
+<br>
+
+<div id="div1" style="width: 200px; height: 200px;">
+
+</div>
+<select name="" id="color" onchange="change()">
+    <option value="red">red</option>
+    <option value="blue">blue</option>
+    <option value="green">green</option>
+</select>
+<br>
+
+<input type="password" id="pass1" ><span id="span"></span>
+<button onclick="cap()">click</button>
+
+
+
+
+
+
+
+
+     <script>
+        // var sum=1000 //>global scope 
+        // function addition(a,b){  //arguments
+
+        //     let num1=a //>local scope
+        //     let num2=b
+        //     let result=num1+num2
+        //     //let sum=2000 //>local scope
+            
+        //     console.log(result)
+        //     console.log("inside side function"+sum)
+        // }
+        // addition(2,4)  //parameters
+        // addition(5,20)
+        // console.log("out side function"+sum)
+        // //console.log(num1)
+    
+
+
+
+        // function addition(a,b){
+        //     let num1=a
+        //     let num2=b
+        //     let result=num1+num2
+        //      return result
+        //      console.log("add")
+        // }
+        // let res= addition(10,25)
+        // console.log(res)
+
+        function rem(){
+          var a=  document.getElementById("fruits")
+          a.remove(a.selectedIndex)
+
+        }
+        function show(){
+           var b= document.getElementById("pass")
+           b.type="text"
+        }
+        
+        function change(){
+            var c=document.getElementById("color").value
+            document.getElementById("div1").style.backgroundColor =c
+
+        
+        }
+
+        function cap(){
+        var z= document.getElementById("pass1")
+        var s=document.getElementById("span")
+
+        if(z.value[0]>="A" && z.value[0]<="Z")
+        {
+            s.innerHTML="first letter is cap"
+
+        }
+        else{
+        s.innerHTML="error"
+        s.style.color="red"
+
+        }
+        
+
+
+        }
+
+
+            
+        
+
+
+
+     </script>
+</body>
+</html>

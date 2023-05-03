@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom</title>
+</head>
+ 
+<body>
+    <h1 id="dom">Dom</h1>
+    <p class="para"> 1 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis mollitia distinctio atque quidem </p>
+    <p class="para"> 2 Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing</p>
+
+
+    
+    <!-- <input type="button" value="click here" onclick="change()"> --> -->
+
+    <!-- calculator -->
+
+     <!-- <input type="text" id="inp1">
+    <input type="text" id="inp2">
+    <br>
+    <input type="button" id="add" onclick="calculate()">+
+    <br>
+    <input type="text" id="answer">
+
+
+    <div class="container" id="ccolor" style="background-color: aqua; height: 400px; width: 400px;">
+         
+
+
+    </div>
+    <select name="" id="change1" onchange="change()">
+
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+    </select>
+    <br><br>
+
+    <input type="password" id="passw">
+    <input type="button" id="bbuton" onclick="show()">Click -->
+
+    <br><br><br><br>
+
+    <!-- removeoptions -->
+
+    <!-- <select name="" id="fruits">
+        <option value="apple">Apple</option>
+        <option value="banana">banana</option>
+        <option value="orange">orange</option>
+        <option value="grape">grape</option>
+    </select>
+    <input type="button" onclick="erase()" value="click">
+
+    <br><br><br><br> -->
+
+    <!-- calculator -->
+
+    <input type="text" id="input1">
+    <br>
+    <select name="" id="calculate">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="text" id="input2">
+    <br><br>
+    <input type="button" onclick="calc()" value="click">
+    <input type="text" id="result">
+
+
+     
+
+<script>
+
+//  add calculator
+
+    // function calculate(){
+    //     var a=Number (document.getElementById("inp1").value)
+    //     var b=Number( document.getElementById("inp2").value)
+    //     var c=document.getElementById("answer")
+
+    //     var result=a+b
+    //     c.value = result
+    // }
+
+    // backgroundColorchange
+
+    // function change(){
+    //     var a =document.getElementById("ccolor")
+    //     var b =document.getElementById("change1")
+    //     ccolor.style.backgroundColor=change1.value
+
+
+    // }
+
+    // passwordshow
+
+    // function show (){
+    //     var pw=document.getElementById("passw")
+    //     pw.type="text"
+    // }
+
+    // removeoptions
+
+    // function erase(){
+    //     var sel =document.getElementById("fruits")
+    //     sel.remove(sel.selectedIndex)
+    // }
+
+
+    // calculator
+
+
+
+    function calc(){
+        num1=Number( document.getElementById("input1").value)
+        num2=Number(document.getElementById("input2").value)
+        selectt=document.getElementById("calculate")
+        answer=document.getElementById("result")
+        var res=0
+        
+     
+        if
+            (selectt.value=="+"){
+                res=num1+num2
+
+            }
+            else if(selectt.value=="-"){
+                res=num1-num2
+            }
+            else if(selectt.value=="*"){
+                res=num1*num2
+            }
+            else if(selectt.value=="/"){
+                res=num1/num2
+            }
+            answer.value=res
+        
+    }
+
+
+     
+
+
+</script>
+
+
+
+     
+          
+     
+</body>
+</html>

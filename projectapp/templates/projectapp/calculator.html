@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="{% static 'css/calculator.css' %}">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="calculator">
+            <form action="">
+                <div>
+                    <input type="text" id="display" width="100px" height="60px">
+                </div>
+                <div>
+                    <input type="button" value="%" onclick="show('%')">
+                    <input type="button" value="Dlt" onclick="Back()">
+                    <input type="button" value="C" onclick="cleare()">
+                    <input type="button" value="+" onclick="opr('+')">
+                </div>
+                <div>
+                    <input type="button" value="9" onclick="show(9)">
+                    <input type="button" value="8" onclick="show(8)">
+                    <input type="button" value="7" onclick="show(7)">
+                    <input type="button" value="-" onclick="show('-')">
+                </div>
+                <div>
+                    <input type="button" value="6" onclick="show(6)">
+                    <input type="button" value="5" onclick="show(5)">
+                    <input type="button" value="4" onclick="show(4)">
+                    <input type="button" value="*" onclick="show('*')">
+                </div>
+                <div >
+                    <input type="button" value="3" onclick="show(3)">
+                    <input type="button" value="2" onclick="show(2)">
+                    <input type="button" value="1" onclick="show(1)">
+                    <input type="button" value="/" onclick="show('/')">
+                </div>
+                <div >
+                    <input type="button" value="0" onclick="show(0)">
+                    <input type="button" value="00" onclick="show(00)">
+                    <input type="button" value="." onclick="show('.')">
+                    <input type="button" value="=" onclick="display.value=eval(display.value)">
+                    
+                </div>
+
+
+
+            </form>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <script>
+       var answer = document.getElementById("display")
+        function show(a) {
+            
+            answer.value += a
+
+        }
+        function cleare(){
+
+            answer.value=""
+        }
+        function opr(b){
+            answer.value  =b           
+
+        }
+
+        function Back() {
+    
+        answer.value = answer.value.slice(0,-1);
+        }
+
+        
+    </script>
+</body>
+
+</html>

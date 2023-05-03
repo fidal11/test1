@@ -1,0 +1,97 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+        <style>
+            .abc {
+                color: blue;
+            }
+            #div1{
+                height: 300px;
+                width: 300px;
+                border: 1px solid black;
+                background-color: aqua;
+                border-radius: 5px;
+                
+            }
+        </style>
+</head>
+
+<body>
+    <p id="p1">p tag<span id="span1">helo</span></p>
+    <br>
+
+    <p id="p2">para 2</p>
+
+    <div id="div1">
+        <h1>child element</h1>
+        <p id="p2">second child</p>
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    $(document).ready(function(){
+
+        var a=$("#p1")
+        // a.html("hi")
+        console.log(a)
+        console.log(a.text())
+        console.log(a.html())
+
+
+
+        // a.html("<h1>hello world</h1>")
+
+        // $("p").html(function(n,m){
+        //     return 'this p elementy has index: ' +n+ ' this p element has content: ' +m
+             
+
+        // })
+        // a.remove()
+        // a.empty()
+        a.addClass("abc")
+
+        var q=$("#div1")
+        console.log(q.width())
+        console.log(q.height())
+        console.log(q.innerHeight())
+        console.log(q.innerWidth())
+        console.log(q.css("background-color"))
+        console.log(q.outerHeight())
+        console.log(q.outerWidth())
+        console.log(q.children()[0])
+
+        var s=$("#p2")
+        console.log(s.parent())
+        console.log(s.siblings())
+        console.log($("p").first().text())
+        console.log($("p").eq([1]))
+
+        
+    })
+</script>
+
+</body>
+
+</html>

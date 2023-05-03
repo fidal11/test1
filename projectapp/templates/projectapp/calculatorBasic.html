@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input1">
+    <br>
+    <select name="" id="calculate">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="text" id="input2">
+    <br><br>
+    <input type="button" onclick="calc()" value="answer">
+    <input type="text" id="result">
+    
+    
+
+     
+
+
+    <script>
+        function calc(){
+        num1=Number( document.getElementById("input1").value)
+        num2=Number(document.getElementById("input2").value)
+        selectt=document.getElementById("calculate")
+        answer=document.getElementById("result")
+        var res=0
+        
+     
+        if
+            (selectt.value=="+"){
+                res=num1+num2
+
+            }
+            else if(selectt.value=="-"){
+                res=num1-num2
+            }
+            else if(selectt.value=="*"){
+                res=num1*num2
+            }
+            else if(selectt.value=="/"){
+                res=num1/num2
+            }
+            answer.value=res
+        
+    }
+     
+
+    </script>
+</body>
+</html>

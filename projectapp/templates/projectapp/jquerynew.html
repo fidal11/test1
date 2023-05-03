@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+    integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <style>
+        .new{
+            background-color: red;
+            font-size: larger;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <p id="ptag">p tag <span id="span">span taag</span></p>
+
+    <h1 id="htag">hello world</h1>
+
+    <div id="div1" style="height: 100px;  width: 100px; border: 20px; padding: 20px;" >
+        <h1 id="htag1">heeey</h1>
+        <p>div 1</p>
+        <h4>hello div</h4>
+        <span>span</span>
+
+    </div>
+    <h2>haaaai</h2>
+
+    <script>
+        $(document).ready(function(){
+            // $("#ptag").html("hello")
+            console.log($("#ptag").html())
+            console.log($("#ptag").text())
+            var a=$("#htag")
+            a.html("<span>new span</span>")
+            console.log(a.html())
+            // $("#div1").html("<p>new p tag </p>")
+            // a.remove()
+            // $("#div1").empty()
+            // $("#div1").addClass("new")
+            var d=$("#div1")
+        console.log(d.outerWidth())
+        console.log($(window).width())
+
+       var b= $("#htag1")
+
+        console.log(d.children())
+        console.log(b.siblings())
+        console.log(b.parent().css("background-color","green"))
+      var z=  $("p").last().text()
+      console.log(z)
+      var h=$("h1").eq(0).text()
+      console.log(h)
+    
+
+
+
+            
+
+        })
+
+        
+    </script>
+</body>
+</html>

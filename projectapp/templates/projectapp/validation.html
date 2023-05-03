@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter name" id="name"><span id="span_name"></span>
+    <br>
+    <input type="password" placeholder="enter password" id="password"><span id="span_password"></span>
+    <br>
+    <input type="text" placeholder="enter phone number" id="number"><span id="span_number"></span>
+
+<br><br>
+    <input type="button" value="submit" id="val" onclick="return validate()">
+
+
+<script>
+    function validate(){
+        nname=document.getElementById("name")
+        console.log("name")
+        if(nname.value=="")
+        {
+            span_name.innerHTML="enter your name" 
+        span_name.style.color="red"
+        return false
+    }else{
+        span_name.value=""
+    }
+    pass=document.getElementById("password")
+    if(pass.value.length!=8){
+        span_password.innerHTML="Must be 8 characters"
+        span_password.style.color="red"
+        return false
+    }
+    else if(pass.value.match(/[a-z]/g)==null){
+        span_password.innerHTML="must contain lower case letters"
+        span_password.style.color="red"
+
+
+    }
+    else{
+        span_password=""
+    }
+    num=document.getElementById("number")
+    if(num.value.match(/^[1-9][0-9]{9}$/)==null){
+        span_number.innerHTML="enter a valid number"
+        span_number.style.color="red"
+        return false
+
+    }
+    else{
+        span_number=""
+    }
+
+    }
+</script>
+
+</body>
+</html>
